@@ -1,0 +1,49 @@
+{
+  "name": "template-auth-node",
+  "version": "0.1.0",
+  "main": "dist/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node dist/server.js",
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --poll --transpile-only --ignore-watch node_modules src/server.ts",
+    "build": "tsc",
+    "orm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "migrate": "yarn orm migration:run",
+    "format": "prettier --write ./src/**/*.{ts,tsx}"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "sqlite3": "^5.0.0",
+    "typeorm": "^0.2.28"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-typescript": "^7.12.1",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.8",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^2.1.2",
+    "ts-node-dev": "^1.0.0-pre.65",
+    "typescript": "~3.9.5"
+  }
+}
